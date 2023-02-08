@@ -1,6 +1,10 @@
-html, body {
+body {
   height: 100%;
   width: 100%;
+  font-family: sans-serif;
+  color: #40c98d;
+  background-color: #27394a;
+  padding: 5%;
 }
 
 p {
