@@ -46,6 +46,7 @@ const YourFirstVueApp = {
         { item: 'Study Angular' },
       ],
       inputTextList: '',
+      html: '<span style="color: blue">Text in blue</span>',
     };
   },
   mounted() {
@@ -74,16 +75,12 @@ const YourFirstVueApp = {
 
 Vue.createApp(YourFirstVueApp).mount('#app');
 
-const List = {
+const InterpolateApp = {
   data() {
     return {
-      listItems: [
-        { item: 'Study Vue course' },
-        { item: 'Learn React Native' },
-        { item: 'Study Angular' },
-      ],
+      html: '<span style="color: blue"> Text in blue</span>',
     };
   },
 };
 
-Vue.createApp(List).mount('#list');
+// Vue.createApp(List).mount('#list');
