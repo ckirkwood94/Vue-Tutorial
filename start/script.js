@@ -38,6 +38,8 @@ const YourFirstVueApp = {
       onHoverText: 'Reactive message',
       isPalindrome: 'racecars',
       inputText: 'Type Here',
+      visible: true,
+      visibleButton: 'Hide Content',
     };
   },
   mounted() {
@@ -49,17 +51,25 @@ const YourFirstVueApp = {
     checkPalindrome() {
       this.isPalindrome = this.isPalindrome.split('').reverse().join('');
     },
+    showOrHideContent() {
+      this.visible = !this.visible;
+      if (this.visible) {
+        this.visibleButton = 'Hide Content';
+      } else {
+        this.visibleButton = 'Show Content';
+      }
+    },
   },
 };
 
 Vue.createApp(YourFirstVueApp).mount('#app');
 
-// const UserInput = {
+// const ConditionalVisibility = {
 //   data() {
 //     return {
-//       inputText: 'Type Here',
+//       visible: false,
 //     };
 //   },
 // };
 
-// Vue.createApp(UserInput).mount('#inputForm');
+// Vue.createApp(ConditionalVisibility).mount('#conditionalVisibility');

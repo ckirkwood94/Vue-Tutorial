@@ -27,11 +27,16 @@
       </button>
       <p>{{ inputText }}</p>
       <input v-model="inputText" />
+      <div>
+        <p v-if="visible">Visible Content</p>
+        <button v-on:click="showOrHideContent">
+          {{ visibleButton }}
+        </button>
+      </div>
     </div>
 
-    <!-- <div id="inputForm">
-      <p>{{ inputText }}</p>
-      <input v-model="inputText" />
+    <!-- <div id="conditionalVisibility">
+      <span v-if="visible">Visible Content</span>
     </div> -->
 
     <script src="script.js"></script>
