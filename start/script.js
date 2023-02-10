@@ -40,6 +40,12 @@ const YourFirstVueApp = {
       inputText: 'Type Here',
       visible: true,
       visibleButton: 'Hide Content',
+      listItems: [
+        { item: 'Study Vue course' },
+        { item: 'Learn React Native' },
+        { item: 'Study Angular' },
+      ],
+      inputTextList: '',
     };
   },
   mounted() {
@@ -59,17 +65,25 @@ const YourFirstVueApp = {
         this.visibleButton = 'Show Content';
       }
     },
+    addItemToList() {
+      this.listItems.push({ item: this.inputTextList });
+      this.inputTextList = '';
+    },
   },
 };
 
 Vue.createApp(YourFirstVueApp).mount('#app');
 
-// const ConditionalVisibility = {
-//   data() {
-//     return {
-//       visible: false,
-//     };
-//   },
-// };
+const List = {
+  data() {
+    return {
+      listItems: [
+        { item: 'Study Vue course' },
+        { item: 'Learn React Native' },
+        { item: 'Study Angular' },
+      ],
+    };
+  },
+};
 
-// Vue.createApp(ConditionalVisibility).mount('#conditionalVisibility');
+Vue.createApp(List).mount('#list');

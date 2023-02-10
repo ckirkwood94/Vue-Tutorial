@@ -33,10 +33,23 @@
           {{ visibleButton }}
         </button>
       </div>
+      <div>
+        <ol>
+          <li v-for="eachItem in listItems">
+            {{ eachItem.item }}
+          </li>
+        </ol>
+        <!-- <p>{{ inputTextList }}</p> -->
+        <input v-model="inputTextList" placeholder="add" @change="addItemToList"/>
+      </div>
     </div>
 
-    <!-- <div id="conditionalVisibility">
-      <span v-if="visible">Visible Content</span>
+    <!-- <div id="list">
+      <ol>
+        <li v-for="eachItem in listItems">
+          {{ eachItem.item }}
+        </li>
+      </ol>
     </div> -->
 
     <script src="script.js"></script>
