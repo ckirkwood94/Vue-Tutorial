@@ -35,6 +35,7 @@ const YourFirstVueApp = {
     return {
       text: 'This is my first app.',
       timer: 0,
+      onHoverText: 'Reactive message',
     };
   },
   mounted() {
@@ -46,17 +47,12 @@ const YourFirstVueApp = {
 
 Vue.createApp(YourFirstVueApp).mount('#app');
 
-// const Timer = {
+// const ReactiveBehavior = {
 //   data() {
 //     return {
-//       timer: 0,
+//       onHoverText: 'Reactive message',
 //     };
-//   },
-//   mounted() {
-//     setInterval(() => {
-//       this.timer++;
-//     }, 1000);
 //   },
 // };
 
-// Vue.createApp(Timer).mount('#timer');
+// Vue.createApp(ReactiveBehavior).mount('#to-hover-element');

@@ -16,10 +16,17 @@
     <div id="app">
       <p>{{ text }}</p>
       <p>Timer: {{ timer }}</p>
+      <p>
+        <span v-bind:title="onHoverText">
+          Hover over me to see a reactive title
+        </span>
+      </p>
     </div>
 
-    <!-- <div id="timer">
-      Timer: {{ timer }}
+    <!-- <div id="to-hover-element">
+      <span v-bind:title="onHoverText">
+        Hover over me to see a reactive title
+      </span>
     </div> -->
 
     <script src="script.js"></script>
