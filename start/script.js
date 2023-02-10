@@ -37,6 +37,7 @@ const YourFirstVueApp = {
       timer: 0,
       onHoverText: 'Reactive message',
       isPalindrome: 'racecars',
+      inputText: 'Type Here',
     };
   },
   mounted() {
@@ -53,17 +54,12 @@ const YourFirstVueApp = {
 
 Vue.createApp(YourFirstVueApp).mount('#app');
 
-// const UserInteraction = {
+// const UserInput = {
 //   data() {
 //     return {
-//       text: 'racecars',
+//       inputText: 'Type Here',
 //     };
-//   },
-//   methods: {
-//     checkPalindrome() {
-//       this.text = this.text.split('').reverse().join('');
-//     },
 //   },
 // };
 
-// Vue.createApp(UserInteraction).mount('#textToReverse');
+// Vue.createApp(UserInput).mount('#inputForm');
