@@ -21,12 +21,17 @@
           Hover over me to see a reactive title
         </span>
       </p>
+      <p>{{ isPalindrome }}</p>
+      <button v-on:click="checkPalindrome">
+        Check If Palindrome
+      </button>
     </div>
 
-    <!-- <div id="to-hover-element">
-      <span v-bind:title="onHoverText">
-        Hover over me to see a reactive title
-      </span>
+    <!-- <div id="textToReverse">
+      <p> {{ text }} </p>
+      <button v-on:click="checkPalindrome">
+        Check If Palindrome
+      </button>
     </div> -->
 
     <script src="script.js"></script>

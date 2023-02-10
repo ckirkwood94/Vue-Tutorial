@@ -36,6 +36,7 @@ const YourFirstVueApp = {
       text: 'This is my first app.',
       timer: 0,
       onHoverText: 'Reactive message',
+      isPalindrome: 'racecars',
     };
   },
   mounted() {
@@ -43,16 +44,26 @@ const YourFirstVueApp = {
       this.timer++;
     }, 1000);
   },
+  methods: {
+    checkPalindrome() {
+      this.isPalindrome = this.isPalindrome.split('').reverse().join('');
+    },
+  },
 };
 
 Vue.createApp(YourFirstVueApp).mount('#app');
 
-// const ReactiveBehavior = {
+// const UserInteraction = {
 //   data() {
 //     return {
-//       onHoverText: 'Reactive message',
+//       text: 'racecars',
 //     };
+//   },
+//   methods: {
+//     checkPalindrome() {
+//       this.text = this.text.split('').reverse().join('');
+//     },
 //   },
 // };
 
-// Vue.createApp(ReactiveBehavior).mount('#to-hover-element');
+// Vue.createApp(UserInteraction).mount('#textToReverse');
