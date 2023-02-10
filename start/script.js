@@ -47,6 +47,7 @@ const YourFirstVueApp = {
       ],
       inputTextList: '',
       html: '<span style="color: blue">Text in blue</span>',
+      sampleString: 'Hello ',
     };
   },
   mounted() {
@@ -70,17 +71,36 @@ const YourFirstVueApp = {
       this.listItems.push({ item: this.inputTextList });
       this.inputTextList = '';
     },
+    addToString() {
+      this.sampleString += 'Hello ';
+    },
   },
 };
 
-Vue.createApp(YourFirstVueApp).mount('#app');
+const appInstance = Vue.createApp(YourFirstVueApp).mount('#app');
 
-const InterpolateApp = {
-  data() {
-    return {
-      html: '<span style="color: blue"> Text in blue</span>',
-    };
-  },
-};
+// console.log(appInstance.sampleString);
+// appInstance.addToString();
+// appInstance.addToString();
+// appInstance.addToString();
+// appInstance.addToString();
+// console.log(appInstance.sampleString);
+
+// console.log(appInstance.value);
+
+// appInstance.value = 10000;
+
+// console.log(appInstance.$data.value);
+
+// appInstance.$data.value = 5555;
+// console.log(appInstance.value);
+
+// const InterpolateApp = {
+//   data() {
+//     return {
+//       html: '<span style="color: blue"> Text in blue</span>',
+//     };
+//   },
+// };
 
 // Vue.createApp(List).mount('#list');
