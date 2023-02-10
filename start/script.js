@@ -34,8 +34,29 @@ const YourFirstVueApp = {
   data() {
     return {
       text: 'This is my first app.',
+      timer: 0,
     };
+  },
+  mounted() {
+    setInterval(() => {
+      this.timer++;
+    }, 1000);
   },
 };
 
 Vue.createApp(YourFirstVueApp).mount('#app');
+
+// const Timer = {
+//   data() {
+//     return {
+//       timer: 0,
+//     };
+//   },
+//   mounted() {
+//     setInterval(() => {
+//       this.timer++;
+//     }, 1000);
+//   },
+// };
+
+// Vue.createApp(Timer).mount('#timer');
