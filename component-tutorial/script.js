@@ -13,4 +13,8 @@ app
   </button>
   `,
   })
+  .component('header-component', {
+    props: ['title'],
+    template: `<h2>{{ title }}</h2>`,
+  })
   .mount('#my-first-div');
