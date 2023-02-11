@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Vue Tutorial</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+
+  <body>
+    <div id="form">
+      <label for="full-name">Full Name</label>
+      <input id="full-name" v-model="inputText" placeholder="John Doe"/>
+      <p> {{ inputText }}</p>
+
+      <p>Enter your question/comment</p>
+      <p style="white-space: pre-line;">{{ textAreaContent }}</p>
+      <textarea v-model="textAreaContent" placeholder="Eg. I have a question..."></textarea>
+    </div>
+
+    <script src="https://unpkg.com/lodash@4.17.20/lodash.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+
+</html>
