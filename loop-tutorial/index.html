@@ -26,6 +26,14 @@
       </ol>
     </div>
 
+    <div>
+      <ol id="object-values">
+        <li v-for="(value, name, index) in sampleObject">
+          {{ name }} - {{ value }} - {{ index }}
+        </li>
+      </ol>
+    </div>
+
     <script src="https://unpkg.com/lodash@4.17.20/lodash.min.js"></script>
     <script src="script.js"></script>
   </body>

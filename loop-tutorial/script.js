@@ -11,3 +11,15 @@ const ArrayLoop = Vue.createApp({
     };
   },
 }).mount('#to-loop-array');
+
+const ObjectLoop = Vue.createApp({
+  data() {
+    return {
+      sampleObject: {
+        title: 'My Object',
+        author: 'Me',
+        info: 'Here is some info',
+      },
+    };
+  },
+}).mount('#object-values');
