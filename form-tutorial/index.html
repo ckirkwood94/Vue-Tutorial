@@ -19,6 +19,40 @@
       <p>Enter your question/comment</p>
       <p style="white-space: pre-line;">{{ textAreaContent }}</p>
       <textarea v-model="textAreaContent" placeholder="Eg. I have a question..."></textarea>
+
+      <p>How did you hear about us?</p>
+      <select v-model="selected">
+        <option v-for="option in options" v-bind:value="option.value">
+          {{ option.text }}
+        </option>
+      </select>
+      <span>{{ selected }}</span>
+
+      <p>Who is this message for?</p>
+      <input type="checkbox" id="questions" value="Questions Team" v-model="checkedOptions" />
+      <label for="questions">Questions Team</label>
+
+      <input type="checkbox" id="comments" value="Comments Team" v-model="checkedOptions" />
+      <label for="comments">Comments Team</label>
+
+      <input type="checkbox" id="head-office" value="Head Office" v-model="checkedOptions" />
+      <label for="head-office">Head Office</label>
+
+      <br>
+      <span>Selected: {{ checkedOptions }}</span>
+  
+      <p>What kind of product are you inquiring about?</p>
+      <input type="radio" id="courses" value="Courses" v-model="radioButtonPicked" />
+      <label for="courses">Courses</label>
+
+      <input type="radio" id="books" value="Books" v-model="radioButtonPicked" />
+      <label for="books">Books</label>
+
+      <input type="radio" id="games" value="Games" v-model="radioButtonPicked" />
+      <label for="games">Games</label>
+
+      <br>
+      <span>Chosen: {{ radioButtonPicked }}</span>
     </div>
 
     <script src="https://unpkg.com/lodash@4.17.20/lodash.min.js"></script>
