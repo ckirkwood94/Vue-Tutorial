@@ -32,11 +32,27 @@
           >
           </header-component>
         </div>
-        <div id="slots-div">
-          <slot-component>
-            <p>Extra text from HTML.</p>
-          </slot-component>
-        </div>
+      </div>
+
+      <div id="slots-div">
+        <slot-component>
+          <p>Extra text from HTML.</p>
+        </slot-component>
+      </div>
+
+      <div id="navigation-div">
+        <button 
+        v-for="option in tabs"
+        v-bind:key="option"
+        v-bind:class="['tab-button', { active: currentTab === option }]"
+        v-on:click="currentTab = option"
+        >
+        {{ option }}
+        </button>
+
+        <component 
+        v-bind:is="currentTabComponent">
+        </component>
       </div>
     </div>
 

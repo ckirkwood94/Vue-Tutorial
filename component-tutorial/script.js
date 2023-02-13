@@ -7,7 +7,14 @@ const app = Vue.createApp({
         { id: 3, title: 'My Third Header', fontSize: 1 },
       ],
       // headerFontSize: 1,
+      currentTab: 'Homepage',
+      tabs: ['Homepage', 'Products', 'Contact'],
     };
+  },
+  computed: {
+    currentTabComponent() {
+      return 'tab-' + this.currentTab.toLowerCase();
+    },
   },
 });
 
@@ -46,5 +53,14 @@ app
       <slot></slot>
     </div>
     `,
+  })
+  .component('tab-homepage', {
+    template: `<div class=navigation>Homepage information</div>`,
+  })
+  .component('tab-products', {
+    template: `<div class=navigation>Products information</div>`,
+  })
+  .component('tab-contact', {
+    template: `<div class=navigation>Contact information</div>`,
   })
   .mount('#my-first-div');
