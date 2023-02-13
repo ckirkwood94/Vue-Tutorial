@@ -14,8 +14,25 @@
     <div id="my-first-div">
       <my-first-component></my-first-component>
       <my-first-component></my-first-component>
-      <header-component title="Use Component Props"></header-component>
-      <header-component title="Build A Component"></header-component>
+      <first-header-component title="Use Component Props"></first-header-component>
+      <first-header-component title="Build A Component"></first-header-component>
+      <div id="emit-events-div">
+        <!-- <div :style="{ fontSize: headerFontSize + 'em' }">
+          <header-component v-for="header in headers"
+          :key="header.id"
+          :title="header.title"
+          @increase-text-size="headerFontSize += 0.5"
+          > -->
+        <div>
+          <header-component v-for="header in headers"
+          :key="header.id"
+          :title="header.title"
+          :style="{ fontSize: header.fontSize + 'em' }"
+          @increase-text-size="header.fontSize += 0.5"
+          >
+          </header-component>
+        </div>
+      </div>
     </div>
 
     <script src="https://unpkg.com/lodash@4.17.20/lodash.min.js"></script>
