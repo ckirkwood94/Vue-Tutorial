@@ -39,4 +39,12 @@ app
     </div>
     `,
   })
+  .component('slot-component', {
+    template: `
+    <div>
+      <p>This is my component.</p>
+      <slot></slot>
+    </div>
+    `,
+  })
   .mount('#my-first-div');
