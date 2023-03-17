@@ -1,3 +1,24 @@
+const otherTabs = [
+  {
+    name: 'Homepage',
+    component: {
+      template: `<div> Home information</div>`,
+    },
+  },
+  {
+    name: 'Products',
+    component: {
+      template: `<div> Products information</div>`,
+    },
+  },
+  {
+    name: 'Contact',
+    component: {
+      template: `<div> Contact information</div>`,
+    },
+  },
+];
+
 const app = Vue.createApp({
   data() {
     return {
@@ -9,11 +30,16 @@ const app = Vue.createApp({
       // headerFontSize: 1,
       currentTab: 'Homepage',
       tabs: ['Homepage', 'Products', 'Contact'],
+      otherTabs,
+      otherCurrentTab: otherTabs[0],
     };
   },
   computed: {
     currentTabComponent() {
       return 'tab-' + this.currentTab.toLowerCase();
+    },
+    getOtherCurrentTab() {
+      return 'tab-' + this.otherCurrentTab.toLowerCase();
     },
   },
 });
