@@ -6,3 +6,39 @@ body {
   background-color: #27394a;
   padding: 5%;
 }
+
+.card {
+  background: #f9f9f9;
+  width: 250px;
+  height: 400px;
+  padding: 25px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 10px;
+  border-radius: 45px;
+  color: #27394a;
+}
+
+img {
+  height: 150px;
+  margin: 0 auto;
+  display: block;
+}
+
+button {
+  text-decoration: none;
+  background: #27394a;
+  color: #f9f9f9;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 45px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.card-header {
+  text-align: center;
+}

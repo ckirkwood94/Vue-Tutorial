@@ -35,14 +35,16 @@ app.component('cards-component', {
   props: ['title', 'link', 'text'],
   template: `
   <div class="card">
-    <h2>{{ title }}</h2>
+    <h2 class="card-header">{{ title }}</h2>
 
     <img v-bind:src="link.src" />
     <p>{{ text }}</p>
 
-    <a :href="link.url">
-      <button>{{ title }} Website</button>
-    </a>
+    <div class="button-container">
+      <a :href="link.url" target="_blank">
+        <button>{{ title }} Website</button>
+      </a>
+    </div>
   </div>
   `,
 });
