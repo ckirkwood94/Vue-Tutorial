@@ -1,0 +1,28 @@
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Vue Tutorial</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+
+  <body>
+    <h1> Build with Custom Directives</h1>
+    <div id="container">
+      <!-- <input v-focus /> -->
+      <!-- <span v-arguments:argumentExample.one.two="message"></span> -->
+      <!-- <p v-stick-element:[location]="100">
+        This is the element that will be stuck to the page.
+      </p> -->
+      <input type="range" min="0" max="300" v-model="locationPadding" />
+      <p v-stick-element:[location]="locationPadding">Sample text to move around the webpage</p>
+    </div>
+
+    <script src="https://unpkg.com/lodash@4.17.20/lodash.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+
+</html>
