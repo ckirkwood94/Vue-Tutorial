@@ -1,0 +1,34 @@
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Vue Tutorial</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+
+  <body>
+    <h1>Build An Interactive To Do List</h1>
+    <div id="container">
+      <form v-on:submit.prevent="addNewTask">
+        <label for="task-input">Add a new task</label>
+        <input v-model="newTask" id="task-input" placeholder="Eg. Watch Vue Course" />
+        <button>Submit</button>
+      </form>
+      <ul>
+        <todo-item 
+          v-for="(task, index) in tasks"
+          :key="task.id"
+          :title="task.title"
+          @remove="tasks.splice(index, 1)"
+        ></todo-item>
+      </ul>
+    </div>
+
+    <script src="https://unpkg.com/lodash@4.17.20/lodash.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+
+</html>
